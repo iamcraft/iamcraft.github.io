@@ -1,0 +1,56 @@
+.wrapper {
+  @apply relative;
+  .desktopHeader {
+    @apply absolute left-0 right-0;
+
+    .headerBar {
+      @apply my-[10px] mx-0;
+
+      .headerRow {
+        @apply min-h-20 md:max-w-7xl sm:max-w-full grid content-center mx-auto px-5;
+
+        & > div {
+          @apply grid items-center gap-5;
+          grid-template-columns: auto auto;
+          overflow-wrap: auto;
+
+          & > div {
+            @apply flex flex-nowrap h-full min-h-0 items-center;
+          }
+        }
+
+        .headerLeft {
+          @apply py-4 inline-flex align-middle items-center;
+
+          & > a {
+            @apply pr-4 visited:no-underline;
+
+            & > img {
+              @apply max-w-[60px];
+            }
+          }
+        }
+
+        .headerRight {
+          @apply flex flex-nowrap justify-end;
+
+          & > nav {
+            @apply pr-2;
+
+            & > ul {
+              @apply flex;
+
+              & > li {
+                @apply leading-[80px] flex justify-center flex-col relative;
+
+                & > a {
+                  @apply text-lg uppercase px-4;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
