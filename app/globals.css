@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  background-color: #6e6e6e;
+  @apply bg-base text-accent;
 }

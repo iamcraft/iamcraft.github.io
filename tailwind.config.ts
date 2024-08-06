@@ -7,14 +7,22 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      sm: "640px",
+      md: "1024px",
+      lg: "1280px",
+      xl: "1536px",
+    },
     container: {
       center: true,
     },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        main: "rgb(27, 174, 112)",
+        secondary: "rgb(6, 117, 46) ",
+        accent: "rgb(20, 38, 28)",
+        accent2: "rgb(78, 86, 82)",
+        base: "rgb(244, 246, 244)",
       },
     },
   },

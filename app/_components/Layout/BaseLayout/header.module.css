@@ -1,7 +1,7 @@
 .wrapper {
   @apply relative;
   .desktopHeader {
-    @apply absolute left-0 right-0;
+    @apply absolute left-0 right-0 max-md:hidden;
 
     .headerBar {
       @apply my-[10px] mx-0;
@@ -32,7 +32,7 @@
         }
 
         .headerRight {
-          @apply flex flex-nowrap justify-end;
+          @apply flex flex-nowrap justify-end text-lg text-white;
 
           & > nav {
             @apply pr-2;
@@ -44,9 +44,83 @@
                 @apply leading-[80px] flex justify-center flex-col relative;
 
                 & > a {
-                  @apply text-lg uppercase px-4;
+                  @apply uppercase px-4;
                 }
               }
+            }
+          }
+
+          .telButton {
+            & > a {
+              @apply flex gap-1 items-center py-[15px] px-6 border-white border-solid border-[1px] hover:border-secondary hover:bg-secondary transition delay-100 rounded-lg;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mobileHeader {
+    @apply absolute left-0 right-0 md:hidden;
+    .headerBar {
+      @apply my-[10px] mx-0;
+
+      .headerRow {
+        @apply min-h-20 md:max-w-7xl sm:max-w-full grid content-center mx-auto px-5;
+
+        & > div {
+          @apply grid items-center gap-5;
+          grid-template-columns: auto auto;
+          overflow-wrap: auto;
+
+          & > div {
+            @apply flex flex-nowrap h-full min-h-0 items-center;
+          }
+        }
+
+        .headerLeft {
+          @apply py-4 inline-flex align-middle items-center;
+
+          & > a {
+            @apply pr-4 visited:no-underline;
+
+            & > img {
+              @apply max-w-[60px];
+            }
+          }
+        }
+
+        .headerRight {
+          @apply flex flex-nowrap justify-end text-lg text-white;
+
+          .burgerMenu {
+            @apply rounded-full bg-secondary border-none mt-1 ml-4 p-3 text-2xl;
+          }
+
+          .navWrapper {
+            @apply absolute bg-inherit top-full mt-1 right-0 left-0 max-w-full mx-5;
+
+            & > ul {
+              @apply bg-base text-accent rounded-md;
+
+              & > li {
+                @apply w-full border-b border-accent py-2 flex;
+
+                &:last-child {
+                  @apply border-none;
+                }
+
+                & > a {
+                  @apply w-full px-2 hover:text-main transition delay-100;
+                }
+              }
+            }
+          }
+
+          .telButton {
+            & > a {
+              @apply flex items-center text-lg gap-1;
+              @apply rounded-full border border-base py-2 px-5 transition-all delay-100 hover:bg-secondary hover:border-secondary;
             }
           }
         }

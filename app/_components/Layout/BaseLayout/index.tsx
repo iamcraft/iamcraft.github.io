@@ -8,7 +8,7 @@ export default function BaseLayout(props: Props) {
   return (
     <>
       <Header />
-      <main>{props.children}</main>
+      <main className="min-h-80 bg-accent2">{props.children}</main>
       <footer></footer>
     </>
   );
