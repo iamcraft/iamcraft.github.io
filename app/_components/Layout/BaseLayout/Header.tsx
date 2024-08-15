@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import style from "./header.module.scss";
 import Link from "next/link";
 import { useState } from "react";
@@ -9,12 +10,13 @@ import {
   IoMenuSharp,
   IoStorefrontOutline,
 } from "react-icons/io5";
+import Slider from "../Slider";
 
 const headerData = {
   logo: (
     <div className="flex gap-1 text-base items-center">
       <IoStorefrontOutline className="text-4xl" />
-      <span className="text-xl">iamcraft</span>
+      <span className="text-xl">iamcraft.store</span>
     </div>
   ),
   menus: [
@@ -62,7 +64,7 @@ const DesktopNavbar = () => (
 );
 
 const MobileNavbar = () => {
-  const [isOpen, setIsOpen] = useState(!false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className={style.mobileHeader}>
@@ -114,7 +116,11 @@ export default function Header() {
     <header className={style.wrapper}>
       <DesktopNavbar />
       <MobileNavbar />
-      <div id="mobile"></div>
+      <Slider
+        backgroundURL="/img/1-home.jpg"
+        buttonText="Get Started"
+        text="Once you choose hope, anything is possible..."
+      />
     </header>
   );
 }

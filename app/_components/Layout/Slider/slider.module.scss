@@ -1,0 +1,17 @@
+.wrapper {
+  @apply min-w-full min-h-screen bg-center bg-no-repeat;
+  @apply bg-cover flex items-center justify-center flex-col;
+  @apply max-md:min-h-[500px];
+  @apply max-sm:min-h-[460px];
+}
+
+.sliderLabel {
+  @apply text-white text-center text-6xl max-w-4xl font-normal sm:leading-normal;
+  @apply max-md:text-4xl max-md:max-w-xl;
+  @apply max-sm:text-3xl max-md:max-w-md;
+}
+
+.sliderButton {
+  @apply text-white bg-main hover:bg-secondary;
+  @apply transition delay-100 rounded-lg py-3 px-10 text-lg mt-4;
+}
